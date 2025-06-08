@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斜杠小丸子 - AI赋能新媒体内容营销专家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe',
+                            300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6',
+                            600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a'
+                        },
+                        secondary: {
+                            50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0',
+                            300: '#6ee7b7', 400: '#34d399', 500: '#10b981',
+                            600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #3b82f6, #1d4ed8, #10b981, #059669);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .typing {
+            border-right: 2px solid;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: currentColor; }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- 导航栏 -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <div class="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                    斜杠小丸子
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-primary-600 transition-colors">首页</a>
+                    <a href="#about" class="hover:text-primary-600 transition-colors">关于我</a>
+                    <a href="#achievements" class="hover:text-primary-600 transition-colors">专业成果</a>
+                    <a href="#cases" class="hover:text-primary-600 transition-colors">案例展示</a>
+                    <a href="#articles" class="hover:text-primary-600 transition-colors">精华文章</a>
+                    <a href="#contact" class="hover:text-primary-600 transition-colors">联系我</a>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 英雄区块 -->
+    <section id="home" class="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
+        <div class="relative z-10 container mx-auto px-4 text-center text-white">
+            <div class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center text-4xl md:text-5xl font-bold">
+                斜杠
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">斜杠小丸子</h1>
+            <p class="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
+                前500强电气工程师 | 制造业短视频获客操盘手 | 新媒体内容运营
+            </p>
+            <div class="text-lg md:text-xl text-white/80 font-medium mb-12">
+                <span id="typing-text" class="typing">AI赋能新媒体内容营销</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#about" class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold border-2 border-white/30 hover:bg-white hover:text-primary-600 transition-all">
+                    了解更多
+                </a>
+                <a href="#contact" class="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-full font-semibold transition-all">
+                    联系我
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">关于我</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    多重身份，多元发展，专注于用AI技术赋能传统制造业的数字化转型
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 p-4 mb-4">
+                        <div class="w-full h-full bg-white rounded"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">姓名</h3>
+                    <p class="text-gray-600 dark:text-gray-300">斜杠小丸子</p>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-teal-600 p-4 mb-4">
+                        <div class="w-full h-full bg-white rounded"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">身份</h3>
+                    <p class="text-gray-600 dark:text-gray-300">前500强电气工程师，制造业短视频获客操盘手，新媒体内容运营</p>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-600 p-4 mb-4">
+                        <div class="w-full h-full bg-white rounded"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">学历</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Edinburgh Napier University 硕士</p>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-orange-500 to-red-600 p-4 mb-4">
+                        <div class="w-full h-full bg-white rounded"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">深耕领域</h3>
+                    <p class="text-gray-600 dark:text-gray-300">AI赋能新媒体内容营销，专注AI编程，工作流</p>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 p-4 mb-4">
+                        <div class="w-full h-full bg-white rounded"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">个人自媒体平台</h3>
+                    <p class="text-gray-600 dark:text-gray-300">微信公众号</p>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 p-4 mb-4">
+                        <div class="w-full h-full bg-white rounded"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">位置</h3>
+                    <p class="text-gray-600 dark:text-gray-300">佛山</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专业成果 -->
+    <section id="achievements" class="py-20 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">专业成果</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    用数据说话，用结果证明实力
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <div class="bg-gray-50 dark:bg-slate-800 rounded-2xl p-8 border border-gray-100 dark:border-slate-700">
+                    <h4 class="text-xl font-bold mb-6">仙居珠宝城-朱二姐</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>两周自然流涨粉</span>
+                                <span class="font-bold">3000+</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>爆款视频播放量</span>
+                                <span class="font-bold">300W</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-slate-800 rounded-2xl p-8 border border-gray-100 dark:border-slate-700">
+                    <h4 class="text-xl font-bold mb-6">台州珠宝人-小佳</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>两周自然流涨粉</span>
+                                <span class="font-bold">8000+</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="h-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>爆款视频播放量</span>
+                                <span class="font-bold">600W</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-3xl p-8 lg:p-12 text-white text-center">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-4">成果总览</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                    <div>
+                        <div class="text-3xl font-bold mb-2">11000+</div>
+                        <div class="text-white/80">总涨粉</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2">900W+</div>
+                        <div class="text-white/80">视频播放量</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2">20W+</div>
+                        <div class="text-white/80">获客成交</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2">10+</div>
+                        <div class="text-white/80">爆文篇数</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section id="cases" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">案例展示</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    真实案例，见证成长，每一个成功都有迹可循
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700 hover:shadow-2xl transition-all cursor-pointer">
+                    <h3 class="text-lg font-bold mb-2">仙居陪跑账号反馈</h3>
+                    <p class="text-sm text-gray-500 mb-4">珠宝行业短视频营销突破</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">通过AI赋能的内容策略，帮助仙居珠宝商家实现从0到1的突破</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-sm">
+                            <span>涨粉数量</span>
+                            <span class="font-bold">3000+</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>爆款播放量</span>
+                            <span class="font-bold">300W</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700 hover:shadow-2xl transition-all cursor-pointer">
+                    <h3 class="text-lg font-bold mb-2">官塘农庄账号反馈</h3>
+                    <p class="text-sm text-gray-500 mb-4">农业品牌数字化营销案例</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">传统农庄通过短视频内容营销实现线上引流和品牌升级</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-sm">
+                            <span>引流获客</span>
+                            <span class="font-bold">20W+</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>转化成交</span>
+                            <span class="font-bold">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700 hover:shadow-2xl transition-all cursor-pointer">
+                    <h3 class="text-lg font-bold mb-2">瑞丰不锈钢账号反馈</h3>
+                    <p class="text-sm text-gray-500 mb-4">B2B制造业获客新模式</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">工业制造企业通过专业内容营销实现询单量稳定增长</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-sm">
+                            <span>日均询单</span>
+                            <span class="font-bold">4-5单</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>客户质量</span>
+                            <span class="font-bold">90%+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精华文章 -->
+    <section id="articles" class="py-20 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">精华文章</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    深度思考，实战分享，每一篇文章都是经验的结晶
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <article class="bg-gray-50 dark:bg-slate-800 rounded-3xl p-8 lg:p-10 border border-gray-100 dark:border-slate-700 hover:shadow-2xl transition-all">
+                    <h3 class="text-2xl lg:text-3xl font-bold mb-4 hover:text-primary-600 transition-colors">
+                        AI赋能新媒体：制造业如何破局传统营销困境
+                    </h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm">AI营销</span>
+                        <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm">制造业转型</span>
+                        <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm">数字化</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-6">
+                        深度分析制造业在数字化转型过程中的营销挑战，提供基于AI技术的解决方案，帮助传统企业实现营销模式升级。
+                    </p>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-6 text-gray-500 dark:text-gray-400 text-sm">
+                            <span>📅 2024-01-15</span>
+                            <span>👁️ 12.5W</span>
+                            <span>👍 2.8K</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <a href="https://mp.weixin.qq.com/s/o2w9xlz8iSexascYltHv0A" target="_blank" 
+                           class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-xl font-semibold transition-all">
+                            阅读全文 ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-gray-50 dark:bg-slate-800 rounded-3xl p-8 lg:p-10 border border-gray-100 dark:border-slate-700 hover:shadow-2xl transition-all">
+                    <h3 class="text-2xl lg:text-3xl font-bold mb-4 hover:text-primary-600 transition-colors">
+                        从0到10W+：短视频内容运营的底层逻辑与实战技巧
+                    </h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm">短视频运营</span>
+                        <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm">内容营销</span>
+                        <span class="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm">数据分析</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-6">
+                        分享短视频运营的核心策略和实战经验，从内容创作到数据分析，全方位解析爆款视频的打造方法。
+                    </p>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-6 text-gray-500 dark:text-gray-400 text-sm">
+                            <span>📅 2024-01-08</span>
+                            <span>👁️ 15.2W</span>
+                            <span>👍 3.5K</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <a href="https://mp.weixin.qq.com/s/-PGJzYRmFMY52WGbt0eXgg" target="_blank" 
+                           class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-xl font-semibold transition-all">
+                            阅读全文 ↗
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-slate-900 dark:to-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">联系我</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    欢迎制造业企业、新媒体机构合作咨询
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- 联系信息 -->
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 p-3">
+                                <div class="w-full h-full bg-white rounded"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">微信公众号</h4>
+                                <p class="font-medium mb-1">斜杠小丸子</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">关注获取最新AI营销资讯</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 p-3">
+                                <div class="w-full h-full bg-white rounded"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">邮箱联系</h4>
+                                <p class="font-medium mb-1">contact@xieguangwanzi.com</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">商务合作请发邮件</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 p-3">
+                                <div class="w-full h-full bg-white rounded"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">所在位置</h4>
+                                <p class="font-medium mb-1">佛山</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">华南地区优先合作</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl p-6 text-white">
+                        <h4 class="text-xl font-bold mb-4">🤝 合作领域</h4>
+                        <ul class="space-y-2 text-white/90">
+                            <li>• 制造业短视频营销策划</li>
+                            <li>• AI工具赋能内容创作</li>
+                            <li>• 新媒体运营培训</li>
+                            <li>• 企业数字化转型咨询</li>
+                            <li>• 工作流程自动化优化</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 联系表单 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6">发送消息</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">姓名 *</label>
+                                <input type="text" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 bg-white dark:bg-slate-700 transition-colors"
+                                       placeholder="请输入您的姓名">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">邮箱 *</label>
+                                <input type="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 bg-white dark:bg-slate-700 transition-colors"
+                                       placeholder="请输入您的邮箱">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">公司/机构</label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 bg-white dark:bg-slate-700 transition-colors"
+                                   placeholder="请输入您的公司或机构名称">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">消息内容 *</label>
+                            <textarea required rows="5"
+                                      class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 bg-white dark:bg-slate-700 transition-colors resize-none"
+                                      placeholder="请详细描述您的需求或想要咨询的问题..."></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white py-4 rounded-xl font-semibold transition-all">
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                    斜杠小丸子
+                </h3>
+                <p class="text-gray-400 mt-2">AI赋能新媒体内容营销专家</p>
+            </div>
+            <div class="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-8"></div>
+            <div class="space-y-4">
+                <p class="text-gray-400">© 2024 斜杠小丸子. 保留所有权利 | Made with ❤️ & AI</p>
+                <div class="text-sm text-gray-500 space-y-1">
+                    <p>专注AI编程 · 工作流优化 · 制造业数字化转型</p>
+                    <p>让技术为人和企业创造更大可能</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-primary-500 to-secondary-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all z-40 hidden">
+        ↑
+    </button>
+
+    <script>
+        // 主题切换
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+
+        // 打字效果
+        const texts = [
+            'AI赋能新媒体内容营销',
+            '专注AI编程',
+            '工作流优化',
+            '制造业数字化转型'
+        ];
+        let currentText = 0;
+        let currentChar = 0;
+        const typingElement = document.getElementById('typing-text');
+        
+        function typeText() {
+            if (currentChar < texts[currentText].length) {
+                typingElement.textContent = texts[currentText].substring(0, currentChar + 1);
+                currentChar++;
+                setTimeout(typeText, 100);
+            } else {
+                setTimeout(() => {
+                    currentChar = 0;
+                    currentText = (currentText + 1) % texts.length;
+                    typeText();
+                }, 2000);
+            }
+        }
+        
+        typeText();
+
+        // 返回顶部
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.remove('hidden');
+            } else {
+                backToTop.classList.add('hidden');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 表单提交
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('消息已发送！我们会尽快回复您。');
+        });
+    </script>
+</body>
+</html> 
